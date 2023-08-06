@@ -3,7 +3,6 @@ const axios = require('axios');
 const cors = require('cors');
 const productsRouter = require('./src/routes/products.router')
 const articlesRouter = require('./src/routes/articles.router')
-const creditsRouter = require('./src/routes/credits.router');
 const app = express();
 require('dotenv').config()
 
