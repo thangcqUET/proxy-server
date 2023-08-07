@@ -4,7 +4,7 @@ const {convertArrayRequestQuery} = require("../utils/utils");
 async function findAll(req, res) {
   try {
     const genreMapList = {
-      'Rap/Hip-Hop': ['rap', 'hip-hop', 'hiphop', 'hip hop', 'gangsta rap'],
+      'Hip-Hop/Rap': ['rap', 'hip-hop', 'hiphop', 'hip hop', 'gangsta rap'],
       Rock: [
         'rock',
         'grunge',
@@ -43,7 +43,7 @@ async function findAll(req, res) {
         'death metal',
         'black metal',
       ],
-      'Dance/Edm': [
+      'Dance/EDM': [
         'Dance',
         'edm',
         'electronic',
@@ -56,7 +56,7 @@ async function findAll(req, res) {
       Country: ['Country', 'Alt-country&Americana', 'Americana'],
       Folk: ['folk', 'folk rock', 'indie folk', 'indie-folk'],
       Jazz: ['jazz', 'jazz vocals', 'jazz traditional', 'nu-jazz', 'soul-jazz&boogaloo'],
-      'Soul/RnB': ['soul', 'r&b', 'soul/r&b', 'neo soul', 'alternative r&b'],
+      'R&B/Soul': ['soul', 'r&b', 'soul/r&b', 'neo soul', 'alternative r&b'],
       Blues: ['blues', 'blues rock', 'blues traditional', 'rhythm and blues'],
       Disco: ['disco'],
       Classical: [
