@@ -19,9 +19,11 @@ app.get('/', (req, res) => {
 /* Router */
 app.use('/products', productsRouter)
 app.use('/articles', articlesRouter)
-app.use('/credits', async (req, res)=>{
-  let entity_id = req.query.entity_id;
-  let response = await axios.get(`https://api.jaxsta.io/catalog/credits?credit_type=release&entity_id=${entity_id}&limit=1000&offset=0&release_type=All&sort=release_date&order=desc&vinyl=true`);
+app.use("/jaxsta", async (req, res) => {
+  let tail = req.originalUrl.replace('/jaxsta','');
+  let response = await axios.get(
+    `https://api.jaxsta.io/${tail}`
+  );
   res.json(response.data);
 });
 /* Error handler middleware */
